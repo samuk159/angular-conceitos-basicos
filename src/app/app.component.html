@@ -1,0 +1,23 @@
+<h1>Nome: {{nome}}</h1>
+
+<h2 *ngIf="mostrar">Olá!</h2>
+
+<h1>Nomes:</h1>
+<h2 *ngFor="let n of nomes">
+  {{n}}
+</h2>
+
+<div [ngSwitch]="nome">
+  <span *ngSwitchCase="'Samuel'">O nome é Samuel</span>
+  <span *ngSwitchCase="'João'">O nome é João</span>
+  <span *ngSwitchDefault>O nome não é nem Samuel e nem João</span>
+</div>
+
+<a [href]="url">Link</a>
+<br>
+<button (click)="mostrarOi()">Clique aqui</button>
+
+<br>
+<Label>Idade:</Label>
+<input type="text" [(ngModel)]="idade">
+<p>Sua idade é {{idade}}</p>
